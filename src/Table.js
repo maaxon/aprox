@@ -10,13 +10,13 @@ function Table({x_arr,y_arr,cellChangeHandler}) {
                     })}
                 </div>
                <div className={classes.col}>
-                   <div className={classes.cell}>x</div>
+                   <div className={classes.cell}>P<sub>1</sub></div>
                     {x_arr.map((x,idx)=>{
                         return <input type={'number'} className={classes.cell} onChange={(e)=>cellChangeHandler(e,'x_arr')} name={idx}  value={x}/>
                     })}
                </div>
                 <div className={classes.col}>
-                    <div className={classes.cell}>y</div>
+                    <div className={classes.cell}>P<sub>1</sub></div>
                     {y_arr.map((y,idx)=>{
                         return <input type={'number'} className={classes.cell} onChange={(e)=>cellChangeHandler(e,'y_arr')}   name={idx} value={y}/>
                     })}

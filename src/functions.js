@@ -27,6 +27,17 @@ export function get_r(arr_x,arr_y,n) {
     console.log(sum_avg_y,sum_avg_x,sum_yx_avg)
     return (sum_yx_avg)/(Math.sqrt((sum_avg_x*sum_avg_y)))
 }
+export function getApproximated(a,b,n) {
+    let x_arr = []
+    let y_arr = []
+    for (let i = 0; i < n; i++) {
+        x_arr[i] = 0.5*(i+1)
+    }
+    for (let i = 0; i < n; i++) {
+        y_arr[i] = a*x_arr[i]+b
+    }
+    return {x_arr,y_arr}
+}
 function getSum(arr) {
     let sum = 0
     for (let i = 0; i < arr.length; i++) {

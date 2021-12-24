@@ -43,3 +43,12 @@
 .disable{
   display: none;
 }
+.title{
+  text-align: center;
+}
+.sub-title{
+  margin-top:10vh;
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: column;
+}
