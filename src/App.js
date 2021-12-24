@@ -56,15 +56,15 @@ function App() {
       const {a,b}= getAB(prevState.x_arr,prevState.y_arr,prevState.n)
       const r = get_r(prevState.x_arr,prevState.y_arr,prevState.n)
       let func
-      if (b>=0) func = `${a}x+${b}, r = ${r}`
-      if (b<0)  func = `${a}x${b}, r = ${r}`
+      if (b>=0) func = `P<sub>2</sub>=${a}P<sub>1</sub>+${b}, r = ${r}`
+      if (b<0)  func = `P<sub>2</sub>=${a}P<sub>1</sub>${b}, r = ${r}`
       const {x_arr,y_arr} = getApproximated(a,b,prevState.n)
       const data = {
         labels: x_arr,
         datasets: [
           {
             id: 1,
-            label: 'График аппроксимированной функции',
+            label: 'График апроксимированной функции',
             data: y_arr,
             borderColor: '#000000',
             backgroundColor: '#000000',

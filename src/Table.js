@@ -16,7 +16,7 @@ function Table({x_arr,y_arr,cellChangeHandler}) {
                     })}
                </div>
                 <div className={classes.col}>
-                    <div className={classes.cell}>P<sub>1</sub></div>
+                    <div className={classes.cell}>P<sub>2</sub></div>
                     {y_arr.map((y,idx)=>{
                         return <input type={'number'} className={classes.cell} onChange={(e)=>cellChangeHandler(e,'y_arr')}   name={idx} value={y}/>
                     })}
