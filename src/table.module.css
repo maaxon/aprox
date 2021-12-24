@@ -1,0 +1,14 @@
+.table{
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    width: 25vw;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.cell{
+    text-align: center;
+    border: 1px solid black;
+    height: 5vh;
+}
