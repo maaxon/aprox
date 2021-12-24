@@ -98,7 +98,7 @@ function App() {
       {state.data === '' ? '':<div className={'graph'}><Line  options={options} datasetIdKey='id1' data={state.data}/></div>}
     </div>
         <div className={'sub-title'}>
-          <p>Государственное учереждение образования средняя школа №15,г. Пинск</p>
+          <p>Государственное учереждение образования Cредняя школа №15,г. Пинск</p>
           <p>Глушко Денис</p>
           <p>Труханович Максим</p>
         </div>
