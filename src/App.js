@@ -30,7 +30,7 @@ function App() {
   const [state,setState] = useState({
     x_arr:[0,0,0,0,0],
     y_arr:[0,0,0,0,0],
-    n:5,
+    n:'',
     a:0,
     b:0,
     func:'',
@@ -56,8 +56,8 @@ function App() {
       const {a,b}= getAB(prevState.x_arr,prevState.y_arr,prevState.n)
       const r = get_r(prevState.x_arr,prevState.y_arr,prevState.n)
       let func
-      if (b>=0) func = `P₂=${a}P₁+${b}, r = ${r}`
-      if (b<0)  func = `P₂=${a}P₁${b}, r = ${r}`
+      if (b>=0) func = `P₂=${a}P₁+${b}`
+      if (b<0)  func = `P₂=${a}P₁${b}`
       const {x_arr,y_arr} = getApproximated(a,b,prevState.n)
       const data = {
         labels: x_arr,
@@ -88,17 +88,18 @@ function App() {
   return (
       <>
       <div className={'title'}><h3>Метод наименьших квадратов</h3></div>
-    <div style={{display:'flex',justifyContent:'space-around'}}>
+      <div style={{display:'flex',justifyContent:'space-around'}}>
       <div style={{marginTop:'7vh'}}>
       <input style={{width:'25vw',textAlign:'center'}} value={state.n} onChange={countChangeHandler} placeholder={'количество данных'}/>
       <Table cellChangeHandler={cellChangeHandler} y_arr={state.y_arr} x_arr={state.x_arr}/>
       <button onClick={clickHandler}>Вычислить</button>
       <p>{state.func}</p>
+      <p>{state.r !== 0 ? `r=${state.r}`:'' }</p>
       </div>
       {state.data === '' ? '':<div className={'graph'}><Line  options={options} datasetIdKey='id1' data={state.data}/></div>}
     </div>
         <div className={'sub-title'}>
-          <p>Государственное учереждение образования Cредняя школа №15,г. Пинск</p>
+          <p>Государственное учереждение образования "Cредняя школа №15,г. Пинск"</p>
           <p>Глушко Денис</p>
           <p>Труханович Максим</p>
         </div>
